@@ -3,6 +3,7 @@ package com.dyl.data.convert.core.util;
 import com.dyl.data.convert.core.converter.ConverterFieldAnalysis;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import org.springframework.beans.BeanUtils;
 import org.springframework.cglib.beans.BeanMap;
 
 import java.util.List;
@@ -29,7 +30,7 @@ public  class BeanUtil {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
-        //BeanUtils.copyProperties(source, target, ignoreProperties);
+        BeanUtils.copyProperties(source, target, ignoreProperties);
         ConverterFieldAnalysis.convertFormat(source, target);
         return target;
     }

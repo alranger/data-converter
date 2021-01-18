@@ -13,7 +13,7 @@ public class ConvertTest {
     @Test
     public void getCompany(){
         Company company = createCompany();
-        CompanyVO companyVO = BeanUtil.covertToOther(company, CompanyVO.class);
+        CompanyVO companyVO = BeanUtil.beanToBean(company, CompanyVO.class);
         System.out.println(companyVO);
     }
 
